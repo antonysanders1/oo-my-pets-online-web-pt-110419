@@ -47,6 +47,10 @@ class Owner
   def sell_pets
     Dog.all.select {|dog| dog.mood = "nervous"}
     Cat.all.select {|cat| cat.mood = "nervous"}
+    
+    [Dog.all, Cat.all].each do |pet|
+      pet.mmod = "nervous"
+      pet.owner = nil
   end 
   
 end
