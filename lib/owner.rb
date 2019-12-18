@@ -1,13 +1,24 @@
 class Owner
   # code goes here
   
+  attr_reader :name, :species
+  
+  @@all = []
+  
+  def initialize(name)
+    @name = name
+    @species = "human"
+    @@all << self
+    @cats = []
   
   
+  def self.all
+    @@all
+  end 
   
-  
-  
-  
-  
+  def say_species
+  "I am a #{@species}."
+end
   
   def self.count
     self.all.count
