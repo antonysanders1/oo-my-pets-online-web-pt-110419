@@ -7,4 +7,21 @@ class Owner
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  def cat 
+  Cat.all.select {|cat| cat.owner == self}
+  end
+  
+  
+  
+  
+  
 end
