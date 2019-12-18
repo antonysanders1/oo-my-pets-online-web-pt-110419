@@ -34,17 +34,21 @@ class Owner
     Cat.new(name, self)
   end 
   
+  
   def buy_dog(name)
     Dog.new(name, self)
   end
+  
   
   def walk_dogs
     Dog.all.select {|dog| dog.mood = "happy"}
   end 
   
+  
   def feed_cats
     Cat.all.select {|cat| cat.mood = "happy"}
   end
+  
   
   def sell_pets
     Dog.all.select {|dog|
