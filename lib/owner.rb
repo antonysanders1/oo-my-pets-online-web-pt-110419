@@ -49,7 +49,7 @@ class Owner
     Cat.all.select {|cat| cat.mood = "nervous"}
     
     [Dog.all, Cat.all].each do |pet|
-      pet.mmod = "nervous"
+      pet.mood = "nervous"
       pet.owner = nil
   end 
   
